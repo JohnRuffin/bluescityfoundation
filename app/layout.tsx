@@ -5,8 +5,9 @@ import "./app.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Iota Omicron Chapter - Omega Psi Phi",
-  description: "Iota Omicron Chapter of Omega Psi Phi Fraternity Inc",
+  title: "Blues City Foundation",
+  description:
+    "In support of the Iota Omicron Chapter of Omega Psi Phi Fraternity Inc",
 };
 
 export default function RootLayout({
