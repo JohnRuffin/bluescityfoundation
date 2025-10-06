@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    serverComponentsExternalPackages: ["aws-amplify"],
-  },
+  serverExternalPackages: ["aws-amplify"],
 };
 
 export default nextConfig;
