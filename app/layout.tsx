@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./app.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Blues City Foundation",
-  description:
-    "In support of the Iota Omicron Chapter of Omega Psi Phi Fraternity Inc",
+  description: "In support of the Iota Omicron Chapter of Omega Psi Phi Fraternity Inc - Clarksdale, Mississippi",
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({
@@ -17,7 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+      </head>
+      <body>{children}</body>
     </html>
   );
 }
