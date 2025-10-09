@@ -6,36 +6,41 @@ import "./globals.css";
 export default function App() {
   const boardMembers = [
     {
-      name: "Vice President",
-      image: "/executiveboard/_DSC9264.JPEG",
-      title: "Vice President"
+      name: "President",
+      image: "/executiveboard/IMG_2608.jpeg",
+      title: "President",
     },
     {
-      name: "Treasurer", 
+      name: "Vice President",
+      image: "/executiveboard/_DSC9264.JPEG",
+      title: "Vice President",
+    },
+    {
+      name: "Treasurer",
       image: "/executiveboard/_DSC9266.JPEG",
-      title: "Treasurer"
+      title: "Treasurer",
     },
     {
       name: "Secretary",
-      image: "/executiveboard/_DSC9270.JPEG", 
-      title: "Secretary"
+      image: "/executiveboard/_DSC9270.JPEG",
+      title: "Secretary",
     },
     {
       name: "Board Legal Counsel",
       image: "/executiveboard/_DSC9256.JPEG",
-      title: "Board Legal Counsel"
-    }
+      title: "Board Legal Counsel",
+    },
   ];
 
   const galleryImages = [
-    '/fundraiser/abd4949f-7d1d-45fb-9ee4-29fbbc420e0d.jpg',
-    '/fundraiser/3024x4032.jpeg.2f4e833d31a34840b1e99655c13f267e.jpg',
-    '/fundraiser/3024x4032.jpeg.6ec2535e88b5410aaf6d321503ab1a15.jpg',
-    '/fundraiser/1152x2048.jpeg.87931b9bcc94455a8637659f61a1ee15.jpg',
-    '/fundraiser/3024x4032.jpeg.81e8abdc47254511bdbe7a55a837b5d8.jpg',
-    '/fundraiser/801x1024.jpeg.a6e5a726a71d4ebbbf049a63798513c8.jpg',
-    '/fundraiser/3024x4032.jpeg.d3625327de744b0e8fde8f9c0b00df0f.jpg',
-    '/fundraiser/1152x2048.jpeg.e40abeea34d546ce94fcb046f59aceb0.jpg'
+    "/fundraiser/abd4949f-7d1d-45fb-9ee4-29fbbc420e0d.jpg",
+    "/fundraiser/3024x4032.jpeg.2f4e833d31a34840b1e99655c13f267e.jpg",
+    "/fundraiser/3024x4032.jpeg.6ec2535e88b5410aaf6d321503ab1a15.jpg",
+    "/fundraiser/1152x2048.jpeg.87931b9bcc94455a8637659f61a1ee15.jpg",
+    "/fundraiser/3024x4032.jpeg.81e8abdc47254511bdbe7a55a837b5d8.jpg",
+    "/fundraiser/801x1024.jpeg.a6e5a726a71d4ebbbf049a63798513c8.jpg",
+    "/fundraiser/3024x4032.jpeg.d3625327de744b0e8fde8f9c0b00df0f.jpg",
+    "/fundraiser/1152x2048.jpeg.e40abeea34d546ce94fcb046f59aceb0.jpg",
   ];
 
   return (
@@ -46,10 +51,17 @@ export default function App() {
           Blues City Foundation
         </h1>
         <p className="text-lg sm:text-xl md:text-2xl mb-8 text-white">
-          In support of the Iota Omicron Chapter of Omega Psi Phi Fraternity Inc
+          A local nonprofit focused on improving the quality of life for
+          citizens in our community and surrounding areas. We work with local,
+          state, and regional stakeholders to create meaningful opportunities.
         </p>
         <div className="text-lg">
-          <p className="text-yellow-400 font-bold" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>Clarksdale, Mississippi • Where Blues Meets Brotherhood</p>
+          <p
+            className="text-yellow-400 font-bold"
+            style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.8)" }}
+          >
+            Clarksdale, Mississippi • Where Blues Meets Brotherhood
+          </p>
         </div>
       </header>
 
@@ -61,10 +73,10 @@ export default function App() {
           </h2>
           <div className="bg-black/60 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-purple-500/50">
             <p className="text-lg md:text-xl leading-relaxed text-center text-gray-100 mb-6">
-              The Blues City Foundation is dedicated to preserving the rich musical heritage of Clarksdale, Mississippi, 
-              while fostering educational opportunities and community development. Through the brotherhood of Omega Psi Phi 
-              Fraternity Inc., we bridge the gap between the historic crossroads of blues music and the future of our community, 
-              ensuring that the legacy of the Delta Blues continues to inspire and educate generations to come.
+              The mission of the Blues City Foundation is centered in its PACS
+              philosophy, which is to promote Pride and Self-Worth, Academic
+              Excellence, Community Health for all citizens, and focus on
+              S.T.E.A.M. To foster a better quality of life.
             </p>
             <p className="text-center text-yellow-400 font-semibold">
               Join us for our signature fundraising event: Blues City Wine Down
@@ -73,7 +85,7 @@ export default function App() {
         </div>
       </section>
 
-{/* Board of Directors Section */}
+      {/* Board of Directors Section */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="font-playfair text-5xl font-black text-center mb-16 text-yellow-400 tracking-tight">
@@ -94,7 +106,9 @@ export default function App() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   </div>
-                  <h3 className="text-xl font-bold text-yellow-400 mb-2">{member.title}</h3>
+                  <h3 className="text-xl font-bold text-yellow-400 mb-2">
+                    {member.title}
+                  </h3>
                   <div className="h-1 w-12 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full"></div>
                 </div>
               </div>
@@ -111,12 +125,16 @@ export default function App() {
               Blues City Wine Down
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Celebrating community, culture, and brotherhood at our signature fundraising event
+              Celebrating community, culture, and brotherhood at our signature
+              fundraising event
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {galleryImages.map((photo, index) => (
-              <div key={index} className="group relative aspect-square overflow-hidden rounded-xl bg-gradient-to-br from-purple-600/20 to-blue-600/20 border border-purple-500/30 hover:border-yellow-400/50 transition-all duration-300">
+              <div
+                key={index}
+                className="group relative aspect-square overflow-hidden rounded-xl bg-gradient-to-br from-purple-600/20 to-blue-600/20 border border-purple-500/30 hover:border-yellow-400/50 transition-all duration-300"
+              >
                 <Image
                   src={photo}
                   alt={`Blues City Wine Down event photo ${index + 1}`}
@@ -131,7 +149,10 @@ export default function App() {
           <div className="text-center mt-12">
             <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/30 inline-block">
               <p className="text-lg text-blue-200">
-                <span className="text-yellow-400 font-semibold">Next Event:</span> Stay tuned for our upcoming Wine Down celebration
+                <span className="text-yellow-400 font-semibold">
+                  Next Event:
+                </span>{" "}
+                Stay tuned for our upcoming Wine Down celebration
               </p>
             </div>
           </div>
@@ -146,14 +167,19 @@ export default function App() {
           </h2>
           <div className="bg-gradient-to-r from-purple-800/30 to-blue-800/30 rounded-2xl p-8 border border-purple-500/30">
             <p className="text-lg text-gray-200 mb-6">
-              Get in touch with the Blues City Foundation to learn more about our mission, 
-              upcoming events, or how you can support our community initiatives.
+              Get in touch with the Blues City Foundation to learn more about
+              our mission, upcoming events, or how you can support our community
+              initiatives.
             </p>
-            <a 
-              href="mailto:info@bluescityfoundation.org" 
+            <a
+              href="mailto:info@bluescityfoundation.org"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold rounded-xl hover:from-yellow-300 hover:to-yellow-400 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-yellow-400/25"
             >
-              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <svg
+                className="w-5 h-5 mr-2"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
                 <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
               </svg>
@@ -166,11 +192,9 @@ export default function App() {
       {/* Footer */}
       <footer className="py-12 px-4 bg-black/50 border-t border-purple-500/30">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-gray-400 mb-4">
-            © 2024 Blues City Foundation • Iota Omicron Chapter, Omega Psi Phi Fraternity Inc.
-          </p>
+          <p className="text-gray-400 mb-4">© 2024 Blues City Foundation</p>
           <p className="text-sm text-gray-500">
-            Clarksdale, Mississippi • The Crossroads of the Blues
+            Clarksdale, Mississippi, The Legandary Crossroads
           </p>
         </div>
       </footer>
