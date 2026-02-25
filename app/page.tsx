@@ -6,11 +6,6 @@ import "./globals.css";
 export default function App() {
   const boardMembers = [
     {
-      name: "President",
-      image: "/executiveboard/IMG_2608.jpeg",
-      title: "President",
-    },
-    {
       name: "Vice President",
       image: "/executiveboard/_DSC9264.JPEG",
       title: "Vice President",
