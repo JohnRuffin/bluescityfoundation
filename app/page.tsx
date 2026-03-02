@@ -27,21 +27,18 @@ export default function App() {
     },
   ];
 
-  const galleryImages = [
-    "/fundraiser/abd4949f-7d1d-45fb-9ee4-29fbbc420e0d.jpg",
-    "/fundraiser/3024x4032.jpeg.2f4e833d31a34840b1e99655c13f267e.jpg",
-    "/fundraiser/3024x4032.jpeg.6ec2535e88b5410aaf6d321503ab1a15.jpg",
-    "/fundraiser/1152x2048.jpeg.87931b9bcc94455a8637659f61a1ee15.jpg",
-    "/fundraiser/3024x4032.jpeg.81e8abdc47254511bdbe7a55a837b5d8.jpg",
-    "/fundraiser/801x1024.jpeg.a6e5a726a71d4ebbbf049a63798513c8.jpg",
-    "/fundraiser/3024x4032.jpeg.d3625327de744b0e8fde8f9c0b00df0f.jpg",
-    "/fundraiser/1152x2048.jpeg.e40abeea34d546ce94fcb046f59aceb0.jpg",
-  ];
-
   return (
     <div className="h-screen bg-gradient-to-b from-purple-900 via-blue-900 to-black text-white overflow-auto">
       {/* Hero Section */}
       <header className="text-center py-16 px-4">
+        <Image
+          src="/crossroadsLogo.png"
+          alt="Blues City Foundation logo"
+          width={180}
+          height={180}
+          className="mx-auto mb-6"
+          priority
+        />
         <h1 className="font-playfair text-4xl sm:text-6xl md:text-8xl font-black mb-6 bg-gradient-to-r from-yellow-400 to-purple-400 bg-clip-text text-transparent tracking-tight">
           Blues City Foundation
         </h1>
@@ -74,7 +71,8 @@ export default function App() {
               S.T.E.A.M. To foster a better quality of life.
             </p>
             <p className="text-center text-yellow-400 font-semibold">
-              Join us for our signature fundraising event: Blues City Wine Down
+              Join us for our featured fundraising event: Blues City Derby
+              Party
             </p>
           </div>
         </div>
@@ -112,42 +110,99 @@ export default function App() {
         </div>
       </section>
 
-      {/* Gallery Section */}
+      {/* Derby Event Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-blue-800/20 to-purple-800/20 mx-4 rounded-2xl mb-16">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
+            <Image
+              src="/crossroadsLogo.png"
+              alt="Blues City Foundation logo"
+              width={140}
+              height={140}
+              className="mx-auto mb-6"
+            />
             <h2 className="font-playfair text-5xl font-black mb-4 text-yellow-400 tracking-tight">
-              Blues City Wine Down
+              Blues City Derby Party
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Celebrating community, culture, and brotherhood at our signature
-              fundraising event
+              Presented by Blues City Foundation on Saturday, May 2, 2026 in
+              Clarksdale, Mississippi
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {galleryImages.map((photo, index) => (
-              <div
-                key={index}
-                className="group relative aspect-square overflow-hidden rounded-xl bg-gradient-to-br from-purple-600/20 to-blue-600/20 border border-purple-500/30 hover:border-yellow-400/50 transition-all duration-300"
-              >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <article className="bg-black/30 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/30">
+              <div className="relative w-full max-w-md mx-auto aspect-[4/5] overflow-hidden rounded-xl mb-6 border border-purple-500/30">
                 <Image
-                  src={photo}
-                  alt={`Blues City Wine Down event photo ${index + 1}`}
+                  src="/DerbyFlyer2026.png"
+                  alt="Blues City Derby Party event flyer"
                   fill
-                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
-            ))}
+              <h3 className="text-2xl font-bold text-yellow-400 mb-4">
+                Event Details
+              </h3>
+              <div className="space-y-2 text-gray-200 text-lg">
+                <p>
+                  <span className="text-yellow-400 font-semibold">Date:</span>{" "}
+                  Saturday, May 2, 2026
+                </p>
+                <p>
+                  <span className="text-yellow-400 font-semibold">Time:</span>{" "}
+                  2:00 PM - 7:00 PM (Post Time Approx. 5:45 PM CT)
+                </p>
+                <p>
+                  <span className="text-yellow-400 font-semibold">Location:</span>{" "}
+                  Cutrer Mansion, 109 Clark St, Clarksdale, MS 38614
+                </p>
+                <p>
+                  <span className="text-yellow-400 font-semibold">
+                    Admission:
+                  </span>{" "}
+                  $50 (Table Package: $500)
+                </p>
+                <p>
+                  <span className="text-yellow-400 font-semibold">Contact:</span>{" "}
+                  Anthony Skipper, (601) 918-9589
+                </p>
+              </div>
+            </article>
+
+            <article className="bg-black/30 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/30">
+              <div className="relative w-full max-w-md mx-auto aspect-[4/5] overflow-hidden rounded-xl mb-6 border border-blue-500/30">
+                <Image
+                  src="/DerbySponsorshipFlyer2026.png"
+                  alt="Blues City Derby Party sponsorship guide flyer"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-2xl font-bold text-yellow-400 mb-4">
+                Sponsorship Levels
+              </h3>
+              <div className="space-y-2 text-gray-200 text-lg">
+                <p>Gold Level: $1,000</p>
+                <p>Purple Level: $500</p>
+                <p>Kelly Green Level: $250</p>
+                <p>Pewter Gray Level: $100</p>
+                <p className="pt-2">
+                  Live Derby Viewing, Southern Cuisine, Cash Bar, Cigar Vendor,
+                  Live Music, Best Hat Contest, and Silent Auction
+                </p>
+                <p>
+                  <span className="text-yellow-400 font-semibold">Sponsor Contact:</span>{" "}
+                  Anthony Skipper, (601) 918-9589
+                </p>
+              </div>
+            </article>
           </div>
           <div className="text-center mt-12">
             <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/30 inline-block">
               <p className="text-lg text-blue-200">
-                <span className="text-yellow-400 font-semibold">
-                  Next Event:
-                </span>{" "}
-                Stay tuned for our upcoming Wine Down celebration
+                <span className="text-yellow-400 font-semibold">Tickets & Sponsorships:</span>{" "}
+                info@bluescityfoundation.org
               </p>
             </div>
           </div>
@@ -187,7 +242,7 @@ export default function App() {
       {/* Footer */}
       <footer className="py-12 px-4 bg-black/50 border-t border-purple-500/30">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-gray-400 mb-4">© 2024 Blues City Foundation</p>
+          <p className="text-gray-400 mb-4">© 2026 Blues City Foundation</p>
           <p className="text-sm text-gray-500">
             Clarksdale, Mississippi, The Legandary Crossroads
           </p>
